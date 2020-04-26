@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'applications#home'
+  root 'application#home'
   get '/signin', to: 'sessions#new', as: 'sigin'
   resources :users
   resources :rides
