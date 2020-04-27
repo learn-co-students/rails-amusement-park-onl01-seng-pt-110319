@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
     def new
+        @user = User.new
     end
     def create
         @user = User.find_by(name: params[:user][:name])
@@ -11,7 +12,7 @@ class SessionsController < ApplicationController
             redirect_to '/signin'
         end
     end
-    def destory
+    def destroy
         session[:user_id] = nil
         redirect_to root_path
     end

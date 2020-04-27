@@ -4,12 +4,8 @@ class User < ActiveRecord::Base
     has_many :attractions, through: :rides
 
     def mood
-        if self.nausea > self.happiness #more nauseous than happy
-            return "sad" 
-        elsif self.nausea < self.happiness
-            return "happy"
-        else 
-            return "We do not have your mood on file"
+        unless admin
+            happiness > nausea ? "happy" : "sad"
         end
     end
 end

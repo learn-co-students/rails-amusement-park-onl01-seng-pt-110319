@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'application#home'
   get '/signin', to: 'sessions#new', as: 'sigin'
+  delete '/sessions', to: 'sessions#destroy'
   resources :users
   resources :rides
   resources :attractions
