@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    if @user = User.find_by(id: params[:id])
+    if @user ||= User.find_by(id: params[:id])
       @attractions = Attraction.all
       redirect_to root_path if session[:user_id] != @user.id
     else
