@@ -1,0 +1,28 @@
+<h1>Welcome <%=@user.name%>!</h1>
+<div class="info">
+<table>
+  <tr>
+    <td>Name:</td>
+    <td><%= @user.name%></td>
+  </tr>
+<% if @user.admin%>
+  <tr>
+    <td>ADMIN</td>
+  </tr>
+<% else %>
+  <tr>
+    <td>Height: </td>
+    <td><%= @user.height%></td>
+  </tr>
+  <tr>
+    <td>Mood: </td>
+    <td><%= @user.mood%></td>
+  </tr>
+  <tr>
+    <td>Tickets: </td>
+    <td><%= @user.tickets%></td>
+  </tr>
+<% end %>
+</table>
+<p><%= link_to('See attractions', attractions_path)%></p>
+</div>

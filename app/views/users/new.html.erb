@@ -1,0 +1,37 @@
+<h1>Signup Form</h1>
+
+<%= form_for @user do |f| %>
+<table>
+  <tr>
+    <td><%= f.label :name%></td>
+    <td><%= f.text_field :name%></td>
+  </tr>
+<tr>
+    <td><%= f.label :password%></td>
+    <td><%= f.text_field :password%></td>
+</tr>
+<tr>
+  <td><%= f.label :height%></td>
+  <td><%= f.text_field :height%></td>
+</tr>
+<tr>
+  <td><%= f.label :happiness%></td>
+  <td><%= f.text_field :happiness%></td>
+</tr>
+<tr>
+  <td><%= f.label :nausea%></td>
+  <td><%= f.text_field :nausea%></td>
+</tr>
+<tr>
+  <td><%= f.label :tickets%></td>
+  <td><%= f.text_field :tickets%></td>
+</tr>
+<tr>
+  <td><%= f.label :admin%></td>
+  <td><%= f.check_box :admin%></td>
+</tr>
+<tr>
+<td><%= f.submit %></td>
+</tr>
+</table>
+<% end %>
